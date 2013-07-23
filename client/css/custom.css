@@ -1,0 +1,19 @@
+/*Custom CSS*/
+
+/*Global*/
+
+/*Typography*/
+.info{margin-bottom:60px;}
+
+
+/*Header*/
+#header .user-controls{margin-top:14px;}
+
+
+/*Quick login form*/
+#quick-login{padding:20px;}
+#quick-login .controls{margin-left:0;}
+
+
+/*Footer*/
+#footer{position:fixed; bottom:0;}

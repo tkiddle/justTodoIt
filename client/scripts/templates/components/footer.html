@@ -1,0 +1,31 @@
+<template name="footer">
+
+	<div class="span12">
+		
+		<ul class="inline">
+
+			<li>
+				{{#if currentUser}}
+					<a href="/" class="logout" title="Logout">Logout</a>
+				{{else}}
+					<a href="/register" title="Register on the site">Register</a>
+				{{/if}}
+			</li>
+
+			<li>
+				<a href="/" title="Frequently asked questions">FAQ</a>
+			</li>
+
+			<li>
+				<a href="/" title="Terms &amp; conditions">Terms &amp; Conditions</a>
+			</li>
+			
+			<li>
+				<a href="/" title="Contact">Contact</a>
+			</li>
+
+		</ul>
+
+	</div>
+
+</template>
