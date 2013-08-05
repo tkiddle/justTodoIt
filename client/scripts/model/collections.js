@@ -1,6 +1,6 @@
 /*Collections*/
 if (Meteor.isClient) {
 
-	var AppUsers = new Meteor.Collection('appUsers');
+	ToDoLists  = new Meteor.Collection('ToDoLists');
 
 }

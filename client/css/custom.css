@@ -17,3 +17,20 @@
 
 /*Footer*/
 #footer{position:fixed; bottom:0;}
+
+
+a i {margin-right:8px;}
+
+.major-spacer{margin:16px 0;}
+.uppr{text-transform:uppercase;}
+
+
+/*New List*/
+#new-list{display:none;}
+#list-name{border:none; box-shadow:none; font-size:18px; color:#000;}
+
+/*List*/
+#list-items{list-style:none; margin:0;}
+
+/*Temporary*/
+#todos{display:none;}

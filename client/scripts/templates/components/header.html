@@ -4,7 +4,7 @@
 
 		<div class="row-fluid">
 
-			<h2 class="pull-left"><a href="/">App Logo</a></h2>
+			<h2 class="pull-left"><a href="/">Just toDo it!</a></h2>
 			{{#if currentUser}}
 				<button class="user-controls btn btn-danger pull-right logout">Logout</button>
 			{{else}}
@@ -21,7 +21,7 @@
 
 									<div class="controls">
 										
-										<input type="text" id="inputEmail" placeholder="Email">
+										<input type="text" name="uname" placeholder="Username">
 										
 									</div>
 
@@ -31,7 +31,7 @@
 
 									<div class="controls">
 
-										<input type="password" id="inputPassword" placeholder="Password">
+										<input type="password" name="pword" placeholder="Password">
 									
 									</div>
 
@@ -47,7 +47,7 @@
 
 										</label>
 
-										<button type="submit" class="btn">Sign in</button>
+										<button type="submit" id="login-submit" class="btn">Sign in</button>
 
 									</div>
 

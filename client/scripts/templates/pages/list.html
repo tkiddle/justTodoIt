@@ -1,0 +1,23 @@
+<template name="list">
+
+	<h4>{{listItem.list.name}}</h4>
+		
+		<form>
+			<input  class="span10 uppr" type="text" name="newItem" placeholder="Add a new todo item to your list" />
+			<button type="submit" class="btn btn-primary pull-right" class="span2">Add Item</button>
+		</form>
+
+		<ul id="list-items">
+			{{#each listItem.list.items}}
+
+				<li class="well well-small">{{text}}</li>
+
+			{{/each}}
+		</ul>
+
+
+
+
+
+	
+</template>

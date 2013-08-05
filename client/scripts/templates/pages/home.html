@@ -1,5 +1,19 @@
 <template name="home">
 
-	<h3>This is the HOME page.</h3>
+	<div class="major-spacer">
+		<a class="uppr" id="add-list" href="#" title="Add a toDo List"><i class="icon-plus-sign"></i>Add a new Just toDoIt List</a>
+	</div>
+
+	<div id="new-list">
+
+		<form name="new-list" id="new-list-form">
+			
+			<input  class="span10 uppr" type="text" name="listName" placeholder="Choose a name for your new list" />
+			
+			<button type="submit" class="btn btn-primary pull-right" class="span2">Create List</button>
+
+		</form>
+
+	</div>
 	
 </template>

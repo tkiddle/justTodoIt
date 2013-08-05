@@ -1,6 +1,19 @@
 <template name="sidebar">
 
+
+
 	<div class="span3">
+
+		{{#if currentUser}}
+			<h4>Your Lists</h4>
+			<ul>
+				{{#each UserLists}}
+					<li>
+						<a href="/list/{{_id}}" title="{{list.name}}"> {{list.name}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		{{/if}}
 	
 		<h4>App Sidebar</h4>
 

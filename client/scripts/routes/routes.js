@@ -9,6 +9,7 @@
 			'about' : 'aboutRoute',
 			'contact' : 'contactRoute',
 			'register' : 'registerRoute',
+			'list/:listId': 'listRoute',
 			'*path' : 'defaultRoute'
 		}
 
@@ -30,6 +31,19 @@
 	//Register page route
 	appRoutes.on('route:registerRoute', function() {
 		Session.set('page_id', 'register');
+	});
+
+	appRoutes.on('route:listRoute' , function(listId){
+		
+		if (ToDoLists.findOne(listId)) {
+			Session.set('page_id', 'list/' + listId);
+
+		} else {
+			Session.set('page_id', 'home');
+		}
+
+
+
 	});
 
 	//Default route for unknow urls
