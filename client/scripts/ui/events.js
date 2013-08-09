@@ -184,12 +184,11 @@ if(Meteor.isClient){
 
 							'owner': owner,
 							'ownerId' : ownerId,
-							'list' : {
-								'name' : listNameVal,
-								'items'	: [
+							'name' : listNameVal,
+							'items'	: [
 
-								]
-							}
+							]
+			
 
 
 						}, function (error, _id) {
@@ -224,7 +223,9 @@ if(Meteor.isClient){
 			var newItemForm = $(e.target),
 				newItem = newItemForm.find('input[name=newItem]'),
 				newItemVal = newItem.val(),
-				currentDoc = Session.get('page_id').slice(Session.get('page_id').indexOf('/') + 1,Session.get('page_id').length);
+				currentDoc = Session.get('page_id').slice(Session.get('page_id').indexOf('/') + 1,Session.get('page_id').length),
+				randId = new Meteor.Collection.ObjectID();
+				cleanId = randId.toHexString();
 
 					if (newItemVal !== '') {
 
@@ -235,9 +236,10 @@ if(Meteor.isClient){
 							currentDoc, 
 							{ $pushAll: 
 								{
-									'list.items': 
+									'items': 
 									[ 
-										{
+										{	
+											'_id' : cleanId, 
 											'text' : newItemVal,
 											'state' : 'new'
 										} 
@@ -255,6 +257,12 @@ if(Meteor.isClient){
 				newItem.val('');							
 
 				return false;		
+
+		},
+
+		'click .progress-check' : function (e) {
+
+			console.dir(e);
 
 		}
 

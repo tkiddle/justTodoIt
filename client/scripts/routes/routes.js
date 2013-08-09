@@ -16,7 +16,7 @@
 	});
 
 	//Instantiate AppRouter
-	var appRoutes = new AppRouter;	
+	appRoutes = new AppRouter;	
 
 	//About page route
 	appRoutes.on('route:aboutRoute', function() {  

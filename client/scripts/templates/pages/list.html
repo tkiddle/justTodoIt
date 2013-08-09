@@ -8,16 +8,20 @@
 		</form>
 
 		<ul id="list-items">
-			{{#each listItem.list.items}}
+			{{#each listItem.items}}
+				<li class="{{state}}" data-item-id="{{_id}}">
 
-				<li class="well well-small">{{text}}</li>
+					<span class="item-text  span10">{{text}}</span>
+					<span class="item-controls span2">
 
+						<span class="control icon-move pull-right"></span>
+						<span class="control icon-remove pull-right"></span>
+						<span class="control item-complete icon-ok pull-right"></span>
+
+					</span>
+
+				</li>
 			{{/each}}
 		</ul>
-
-
-
-
-
 	
 </template>

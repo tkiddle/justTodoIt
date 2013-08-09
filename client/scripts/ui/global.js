@@ -1,6 +1,6 @@
 /*Application Global JS*/
 
-var App = {} || Application;
+App = {} || Application;
 
 App.util = {
 
