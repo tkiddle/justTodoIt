@@ -9,14 +9,21 @@
 
 		<ul id="list-items">
 			{{#each listItem.items}}
-				<li class="{{state}}" data-item-id="{{_id}}">
+				<li class="item-{{state}}" data-item-id="{{_id}}">
 
-					<span class="item-text  span10">{{text}}</span>
+					<span class="item-text span10">
+						<span class="innr-text {{state}}">{{text}}</span>
+					</span>
+
+					<span class="update-item span10">
+						<input type="text" class="span12"  value="{{text}}" />
+					</span>
+
 					<span class="item-controls span2">
 
-						<span class="control icon-move pull-right"></span>
-						<span class="control icon-remove pull-right"></span>
-						<span class="control item-complete icon-ok pull-right"></span>
+						<span class="control item-drag icon-move pull-right"></span>
+						<span class="control item-remove icon-remove pull-right"></span>
+						<span class="control item-state icon-ok pull-right"></span>
 
 					</span>
 

@@ -74,27 +74,17 @@
 
 					<ul class="nav">
 
-						<li>
-							<a href="/home">Home</a>
-						</li>
+						{{#if currentUser}}
 
-						<li>
-							<a href="/about">About Us</a>
-						</li>
+							{{> nav-authenticated}}
+							
+						{{else}}
 
-						<li>
-							<a href="/contact">Contact</a>
-						</li>
+							{{> nav-anonymous}}					
+
+						{{/if}}
 
 					</ul>
-
-					<form class="navbar-form pull-right">
-
-						<input type="text" class="span8">
-
-						<button type="submit" class="btn pull-right">Search</button>
-
-					</form>
 
 				</div>
 

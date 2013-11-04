@@ -27,22 +27,24 @@ if (Meteor.isClient) {
 		return Session.get('page_id') == 'register';
 	};
 
+	//Modal window One
+	Template.modal.modalOne = function () {
+		return Session.get('current_modal') == 'modalOne';
+	};
 
-
-
-
-	//Collection Mapping
-
+	//Modal window Two
+	Template.modal.modalTwo = function () {
+		return Session.get('current_modal') == 'modalTwo';
+	};
 
 	//Map individual lists
 	Template.list.listItem = function () {
 		return ToDoLists.findOne(Session.get('page_id').slice(Session.keys.page_id.indexOf('/'), Session.get('page_id').length));
 	}
 
+	//Sidebar list items
 	Template.sidebar.UserLists = function () {
 		return ToDoLists.find({'ownerId' : Meteor.userId()}).fetch();
 	}
-
-
 
 }

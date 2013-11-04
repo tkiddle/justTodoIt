@@ -1,0 +1,91 @@
+<template name="introHeader">
+
+	<nav class="navbar navbar-fixed-top">
+
+		<div class="navbar-inner">
+
+			<a class="brand" href="#">Main Menu</a>
+
+			<ul class="nav">
+
+				<li>
+					<a href="/home">Home</a>
+				</li>			
+
+				<li>
+					<a href="#myModal" id="add-list" role="button">Add a list</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<div class="span12">
+
+		<div class="row-fluid">
+
+			<h2 class="pull-left"><a href="/">Just toDo it!</a></h2>
+			{{#if currentUser}}
+				<button class="user-controls btn btn-danger pull-right logout">Logout</button>
+			{{else}}
+				<div class="user-controls btn-group pull-right">
+
+					<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#"> Login <span class="caret"></span></a>
+
+					<ul class="dropdown-menu">
+					
+						<li>
+							<form id="quick-login" class="form-horizontal">
+
+								<div class="control-group">
+
+									<div class="controls">
+										
+										<input type="text" name="uname" placeholder="Username">
+										
+									</div>
+
+								</div>
+
+								<div class="control-group">	
+
+									<div class="controls">
+
+										<input type="password" name="pword" placeholder="Password">
+									
+									</div>
+
+								</div>
+
+								<div class="control-group">
+									
+									<div class="controls">
+
+										<label class="checkbox">
+
+											<input type="checkbox"> Remember me
+
+										</label>
+
+										<button type="submit" id="login-submit" class="btn">Sign in</button>
+
+									</div>
+
+								</div>
+
+							</form>
+
+						</li>
+
+					</ul>
+
+				</div>
+			{{/if}}
+
+		</div>
+
+	</div>
+
+</template>
